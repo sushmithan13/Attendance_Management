@@ -1,8 +1,7 @@
 package com.example.sush_p1;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,19 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 public class StudentSearch extends AppCompatActivity {
     FirebaseFirestore db=FirebaseFirestore.getInstance();
     @Override
@@ -30,7 +26,6 @@ public class StudentSearch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_search);
     }
-
     public void search(View view) {
         String searchTxt=((TextView)findViewById(R.id.search_txt)).getText().toString();
         Task<DocumentSnapshot> query= db.collection("Attendance").document(searchTxt).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -53,5 +48,9 @@ public class StudentSearch extends AppCompatActivity {
                 }
             }
         });
+    }
+    public void backToAtten(View view) {
+        Intent intent= new Intent(this,Attendance.class);
+        startActivity(intent);
     }
 }

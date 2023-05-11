@@ -1,8 +1,6 @@
 package com.example.sush_p1;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,18 +10,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.SuccessContinuation;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-
 public class Our_Story extends AppCompatActivity {
     ListView listView;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -57,5 +52,8 @@ public class Our_Story extends AppCompatActivity {
             }
         });
     }
-
+    public void backToHome(View view) {
+        Intent intent= new Intent(this,Home_Page.class);
+        startActivity(intent);
+    }
 }

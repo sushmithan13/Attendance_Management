@@ -8,21 +8,37 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="736dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/regno"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Enter Register No"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_id2" />
 
         <Button
             android:id="@+id/add_event_btn"
             android:layout_width="181dp"
             android:layout_height="71dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginEnd="115dp"
+            android:layout_marginBottom="142dp"
             android:fontFamily="sans-serif-black"
             android:onClick="addEventStudentToDb"
             android:text="@string/add_event_btn"
@@ -34,13 +50,12 @@
             app:iconTint="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.57"
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -55,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginTop="48dp"
-            android:text="@string/add_event_txt"
+            android:text="Give Attendance"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -66,13 +81,12 @@
             android:id="@+id/event_name2_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="76dp"
             android:text="@string/event_name_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
@@ -80,14 +94,12 @@
             android:id="@+id/event_id2_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
             android:text="@string/event_id_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
-            app:layout_constraintHorizontal_bias="0.215"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/event_name2_txt" />
 
@@ -95,72 +107,54 @@
             android:id="@+id/event_description_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginBottom="328dp"
-            android:text="register number"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
+            android:text="Register Number"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
-            app:layout_constraintHorizontal_bias="0.565"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_id2_txt" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
+            android:contentDescription="backkk"
+            android:onClick="backtoAtt"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
 
-        <EditText
-            android:id="@+id/event_name2"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="71dp"
-            android:layout_marginEnd="16dp"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="@string/event_name"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/event_name2_txt"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <EditText
             android:id="@+id/event_id2"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="63dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/event_id"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toEndOf="@+id/event_name2_txt"
-            app:layout_constraintTop_toBottomOf="@+id/event_name2" />
-
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/regno2"
-            android:layout_width="173dp"
-            android:layout_height="91dp"
-            android:layout_marginBottom="284dp"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="enter register no"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:id="@+id/textView2"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="Enter Event Name"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.827"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

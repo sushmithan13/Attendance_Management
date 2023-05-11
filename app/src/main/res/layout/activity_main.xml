@@ -10,6 +10,8 @@
         android:id="@+id/Home_btn"
         android:layout_width="186dp"
         android:layout_height="82dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="115dp"
         android:layout_marginBottom="204dp"
         android:fontFamily="sans-serif-black"
         android:onClick="nextPage"
@@ -22,7 +24,6 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

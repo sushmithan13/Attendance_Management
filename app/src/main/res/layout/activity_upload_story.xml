@@ -9,30 +9,33 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="731dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
         <EditText
             android:id="@+id/file"
-            android:layout_width="176dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="248dp"
+            android:layout_width="259dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:hint="Double tap to upload"
+            android:textAlignment="center"
+            android:textColor="#FDF9F9"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/fileName" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -47,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginTop="48dp"
-            android:text="@string/events2_txt"
+            android:text="Our Story Upload"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -56,36 +59,46 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="85dp"
-            android:layout_height="74dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
             android:contentDescription="back"
+            android:onClick="bacToFac"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
 
         <EditText
             android:id="@+id/fileName"
-            android:layout_width="176dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="132dp"
+            android:layout_width="256dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="204dp"
+            android:hint="Type Article Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Button"
+            android:layout_width="181dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="261dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Upload"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fileName"
-            app:layout_constraintVertical_bias="0.342" />
+            app:layout_constraintTop_toBottomOf="@+id/file"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

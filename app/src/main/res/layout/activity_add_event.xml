@@ -8,38 +8,40 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="411dp"
-        android:layout_height="716dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/add_event_btn"
             android:layout_width="181dp"
             android:layout_height="71dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
             android:fontFamily="sans-serif-black"
             android:onClick="addEventToDb"
             android:text="@string/add_event_btn"
             android:textColor="#020000"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="#FFFFFF"
             app:cornerRadius="50dp"
             app:iconTint="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.569"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_name21" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -65,13 +67,12 @@
             android:id="@+id/event_name2_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="76dp"
             android:text="@string/event_name_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
@@ -79,14 +80,12 @@
             android:id="@+id/event_id2_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
             android:text="@string/event_id_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
-            app:layout_constraintHorizontal_bias="0.215"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/event_name2_txt" />
 
@@ -94,14 +93,12 @@
             android:id="@+id/event_date_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
             android:text="@string/event_date_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
-            app:layout_constraintHorizontal_bias="0.157"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/event_id2_txt" />
 
@@ -109,87 +106,84 @@
             android:id="@+id/event_description_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
             android:text="@string/event_description_txt"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/event_name2"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/event_date_txt" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
+            android:layout_marginEnd="6dp"
+            android:contentDescription="button"
+            android:onClick="addEventBack"
+            app:layout_constraintEnd_toStartOf="@+id/attendance_txt"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
 
         <EditText
-            android:id="@+id/event_name2"
+            android:id="@+id/event_name25"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="71dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="30dp"
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/event_name"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/event_name2_txt"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <EditText
             android:id="@+id/event_id2"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="63dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/event_id"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toEndOf="@+id/event_name2_txt"
-            app:layout_constraintTop_toBottomOf="@+id/event_name2" />
+            app:layout_constraintTop_toBottomOf="@+id/event_name25" />
 
         <EditText
             android:id="@+id/event_date2"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="62dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/event_date"
             android:inputType="datetime|date"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toEndOf="@+id/event_name2_txt"
             app:layout_constraintTop_toBottomOf="@+id/event_id2" />
 
         <EditText
-            android:id="@+id/regno2"
-            android:layout_width="180dp"
-            android:layout_height="144dp"
-            android:layout_marginBottom="172dp"
+            android:id="@+id/event_name21"
+            android:layout_width="179dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/event_description"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.831"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/event_date2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

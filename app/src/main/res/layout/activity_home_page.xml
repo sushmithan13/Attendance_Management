@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="412dp"
-        android:layout_height="718dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,6 @@
             app:cornerRadius="50dp"
             app:iconTint="#000000"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/faculty_login_btn" />
 
@@ -52,7 +51,6 @@
             app:cornerRadius="50dp"
             app:iconTint="#000000"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/student_login_btn" />
 
@@ -60,7 +58,9 @@
             android:id="@+id/student_login_btn"
             android:layout_width="290dp"
             android:layout_height="95dp"
+            android:layout_marginStart="115dp"
             android:layout_marginTop="127dp"
+            android:layout_marginEnd="115dp"
             android:fontFamily="sans-serif-black"
             android:onClick="goToStudentLogin"
             android:text="@string/student_login_btn"
@@ -90,7 +90,7 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -101,24 +101,15 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
+            android:contentDescription="home"
             android:onClick="backToMain"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bell" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

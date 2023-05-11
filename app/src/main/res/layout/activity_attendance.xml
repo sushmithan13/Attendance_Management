@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="728dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginTop="48dp"
-            android:text="@string/events2_txt"
+            android:text="Attendance"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -45,11 +45,12 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="85dp"
-            android:layout_height="74dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
             android:contentDescription="back"
+            android:onClick="backTofaculty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
@@ -58,27 +59,27 @@
             android:id="@+id/add_story_btn"
             android:layout_width="170dp"
             android:layout_height="164dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="150dp"
             android:contentDescription="add"
             android:onClick="goToAddEvent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            app:srcCompat="@drawable/add_event" />
+            app:srcCompat="@drawable/give_att" />
 
         <ImageButton
             android:id="@+id/giveAttendance_btn"
             android:layout_width="170dp"
             android:layout_height="164dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             android:contentDescription="del"
             android:onClick="goToDeleteEvent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_story_btn"
-            app:srcCompat="@drawable/delete_event" />
+            app:srcCompat="@drawable/stu_search" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

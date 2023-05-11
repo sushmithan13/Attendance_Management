@@ -1,9 +1,7 @@
 package com.example.sush_p1;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -23,10 +20,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
 import java.util.HashMap;
 import java.util.Map;
-
 public class Upload_Story extends AppCompatActivity {
     Button uploadBtn;
     EditText file;
@@ -34,7 +29,6 @@ public class Upload_Story extends AppCompatActivity {
     FirebaseStorage storage=FirebaseStorage.getInstance();
     FirebaseFirestore db= FirebaseFirestore.getInstance();
     StorageReference reference;
-
 //    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +68,6 @@ public class Upload_Story extends AppCompatActivity {
             });
         }
     }
-
     private void uploadPdfFileFirebase(Uri data) {
         final ProgressDialog progressDialog= new ProgressDialog(this);
         progressDialog.setTitle("File is loading...");
@@ -86,7 +79,6 @@ public class Upload_Story extends AppCompatActivity {
                 Task<Uri> uriTask=taskSnapshot.getStorage().getDownloadUrl();
                 while(!uriTask.isComplete());
                 Uri uri=uriTask.getResult();
-
                     putPDF putPDF= new putPDF(file.getText().toString(),uri.toString());
                 Map<String,Object> pdfData= new HashMap<>();
                 pdfData.put("PdfName",file.getText().toString());
@@ -98,15 +90,15 @@ public class Upload_Story extends AppCompatActivity {
                         Toast.makeText(Upload_Story.this, "SUCCESSFULLY UPLOADED", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
-
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-
             }
         });
+    }
+    public void bacToFac(View view) {
+        Intent intent= new Intent(this,Faculty_Page.class);
+        startActivity(intent);
     }
 }

@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="406dp"
-        android:layout_height="735dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +21,11 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="360dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton"></LinearLayout>
 
@@ -45,10 +44,12 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
+            android:contentDescription="backk"
+            android:onClick="backToFacultyLogin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow" />
@@ -57,7 +58,8 @@
             android:id="@+id/imageButton8"
             android:layout_width="170dp"
             android:layout_height="164dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="90dp"
+            android:contentDescription="eventt"
             android:onClick="goToEventsEdit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -70,6 +72,7 @@
             android:layout_width="170dp"
             android:layout_height="164dp"
             android:layout_marginTop="40dp"
+            android:contentDescription="storyy"
             android:onClick="uploadPDF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -82,12 +85,13 @@
             android:layout_width="170dp"
             android:layout_height="164dp"
             android:layout_marginTop="40dp"
+            android:contentDescription="studentt"
             android:onClick="goToAttendance"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-            app:srcCompat="@drawable/student_search" />
+            app:srcCompat="@drawable/att_iconn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
